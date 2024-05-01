@@ -8,7 +8,8 @@ public class System{
     private JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13,l14, limg,l15;
     private JRadioButton r1,r2,r3;
     private JPanel p1, p2;
-    private JTextField tName, tPass;
+    private JTextField tName;
+    private JPasswordField tPass;
     private JButton j1;
 
     System() {
@@ -52,7 +53,7 @@ public class System{
         tName = new JTextField();
         tName.setBounds(115, 340, 250, 25);
         
-        tPass = new JTextField();
+        tPass = new JPasswordField();
         tPass.setBounds(115, 460, 250, 25);
         
         

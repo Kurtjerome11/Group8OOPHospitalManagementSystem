@@ -23,7 +23,7 @@ public class MainUi{
         
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
-
+        
         // add objects to the frame
         f1.add(l1);
         f1.add(l4);

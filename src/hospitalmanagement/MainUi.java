@@ -4,39 +4,93 @@ import java.awt.*;
 
 public class MainUi{
     private JFrame f1 = new JFrame("Group8 OOP");
-    private JLabel l1, l2,l4;
-    private JRadioButton r1,r2,r3;
-    private JTextField tName, tPass;
+    private JLabel l1, l2, l4, l5, limg;
+    private JButton b1, b2, b3, b4; 
+    private JPanel p1;
+    
 
     MainUi() {
-        //frame setting
+        // Frame settings
         f1.setSize(1200, 700);
+        f1.getContentPane().setBackground(Color.BLACK);
         
-        //label settings
-        l1 = new JLabel("Hospital Management System");
-        l1.setBounds(110, 20, 1000, 100);
-        l1.setFont(new Font("Cambria",Font.PLAIN,75));
+        // Label settings
+        l1 = new JLabel("What do you want to do?");
+        l1.setBounds(40, 0, 1000, 100);
+        l1.setFont(new Font("Cambria",Font.PLAIN,35));
+        l1.setForeground(Color.WHITE);
         
-        l4 = new JLabel("____________________________________________");
-        l4.setBounds(0, 65, 2000, 100);
-        l4.setFont(new Font("Arial",Font.PLAIN,50));
+        l4 = new JLabel("______________________________________________________________________________");
+        l4.setBounds(0, 30, 2000, 100);
+        l4.setFont(new Font("Arial",Font.PLAIN,30));
+        l4.setForeground(Color.WHITE);
+        
+        l5 = new JLabel("______________________________________________________________________________");
+        l5.setBounds(0, 510, 2000, 100);
+        l5.setFont(new Font("Arial",Font.PLAIN,30));
+        l5.setForeground(Color.WHITE);
         
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
         
-        // add objects to the frame
+        
+        //buttons and its settings
+        b1 = new JButton("Manage Patients Information");
+        b1.setBounds(275, 175, 250, 100);
+        b1.setForeground(Color.BLACK);
+        b1.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
+        b1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        
+        b2 = new JButton("View Hospital's Inventory");
+        b2.setBounds(625, 175, 250, 100);
+        b2.setForeground(Color.BLACK);
+        b2.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
+        b2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        
+        b3 = new JButton("View Reports");
+        b3.setBounds(275, 400, 250, 90);
+        b3.setForeground(Color.BLACK);
+        b3.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
+        b3.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        
+        b4 = new JButton("Others");
+        b4.setBounds(625, 400, 250, 90);
+        b4.setForeground(Color.BLACK);
+        b4.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
+        b4.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        
+        //code for load image
+        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\fin.jpg");
+        Image i2 = i1.getImage().getScaledInstance(1200, 480, Image.SCALE_SMOOTH);
+        ImageIcon i3 = new ImageIcon(i2);
+        
+        //label for the pic
+        limg = new JLabel(i3);
+        
+        //panel for image on the ui and it setttings
+        p1 = new JPanel();
+        p1.setBounds(-150, 90, 1500, 700);
+        p1.setBackground(Color.BLACK);
+        
+        //will add the label to the panel
+        p1.add(limg);
+        
+        // Add objects to the frame
         f1.add(l1);
         f1.add(l4);
+        f1.add(l5);
+        f1.add(b1);
+        f1.add(b2);
+        f1.add(b3);
+        f1.add(b4);
+        f1.add(p1);
         f1.add(l2);
         
-        //frame settings 2.0
+        // Frame settings 2.0
         f1.setVisible(true);
         f1.setLocationRelativeTo(null);
         f1.setLayout(null);
         f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-    public static void main(String[] args) {
-        new System();
-    }
 }
+

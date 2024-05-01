@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class System{
+public class LoginUI{
     private JFrame f1 = new JFrame("Group8 OOP");
     private JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13,l14, limg,l15;
     private JRadioButton r1,r2,r3;
@@ -12,7 +12,7 @@ public class System{
     private JPasswordField tPass;
     private JButton j1;
 
-    System() {
+    LoginUI() {
         //frame setting
         f1.setSize(1200, 700);
         f1.getContentPane().setBackground(Color.BLACK);
@@ -28,7 +28,7 @@ public class System{
         l4.setFont(new Font("Arial",Font.PLAIN,50));
         l4.setForeground(Color.WHITE);
         
-        l2 = new JLabel("Welcome, how can we help you?");
+        l2 = new JLabel("Welcome! , please login first:");
         l2.setBounds(115, 120, 500, 100);
         l2.setFont(new Font("Cambria",Font.PLAIN,20));
         l2.setForeground(Color.WHITE);
@@ -57,34 +57,10 @@ public class System{
         tPass.setBounds(115, 460, 250, 25);
         
         
-        //this is for position purposes only
-        l14 = new JLabel();
-        l14.setBounds(1100, 200, 100, 1000);
-                
-        l5 = new JLabel();
-        l5.setBounds(1100, 200, 100, 1000);
-        
-        l12 = new JLabel();
-        l12.setBounds(1100, 200, 100, 1000);
-        
-        l13 = new JLabel();
-        l13.setBounds(1100, 200, 100, 1000);
-       
-        l11 = new JLabel();
-        l11.setBounds(1100, 200, 100, 1000);
-        
-        l9 = new JLabel();
-        l9.setBounds(1100, 200, 100, 1000);
-        
-        l7 = new JLabel();
-        l7.setBounds(1100, 200, 100, 1000);
-        
+        //this is for position purposes only    
         l3 = new JLabel();
         l3.setBounds(1100, 200, 100, 1000);
-        
-        l15 = new JLabel();
-        l15.setBounds(1100, 200, 100, 1000);
-        
+
         
         //login button settings
         j1 = new JButton("Login");
@@ -150,23 +126,15 @@ public class System{
         f1.add(p1);
         f1.add(l1);
         f1.add(l2);
-        f1.add(l3);
         f1.add(l4);
-        f1.add(l5);
-        f1.add(l6);
-        f1.add(l7);
         f1.add(l8);
-        f1.add(l9);
+        f1.add(l6);
         f1.add(l10);
-        f1.add(l11);
         f1.add(tName);
-        f1.add(l12);
         f1.add(tPass);
-        f1.add(l13);
         f1.add(j1);
-        f1.add(l14);
         f1.add(p2);
-        f1.add(l15);
+        f1.add(l3);
         
         //frame settings 2.0
         f1.setVisible(true);
@@ -174,10 +142,5 @@ public class System{
         f1.setLayout(null);
         f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
-
-    public static void main(String[] args) {
-        new System();
-    }
 }
-
 

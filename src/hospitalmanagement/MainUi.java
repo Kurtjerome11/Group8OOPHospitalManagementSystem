@@ -33,7 +33,6 @@ public class MainUi{
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
         
-        
         //buttons and its settings
         b1 = new JButton("Manage Patients Information");
         b1.setBounds(275, 175, 250, 100);

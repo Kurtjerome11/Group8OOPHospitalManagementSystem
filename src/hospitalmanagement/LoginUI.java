@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class LoginUI{
     private JFrame f1 = new JFrame("Group8 OOP");
-    private JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13,l14, limg,l15;
+    private JLabel l1, l2, l3, l4, l6, l8, l10,limg;
     private JRadioButton r1,r2,r3;
     private JPanel p1, p2;
     private JTextField tName;

@@ -1,6 +1,8 @@
 package hospitalmanagement;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainUi{
     private JFrame f1 = new JFrame("Group8 OOP");
@@ -39,24 +41,51 @@ public class MainUi{
         b1.setForeground(Color.BLACK);
         b1.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
         b1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                 f1.dispose();
+                 new ManageUI();
+                } 
+        });
         
         b2 = new JButton("View Hospital's Inventory");
         b2.setBounds(625, 175, 250, 100);
         b2.setForeground(Color.BLACK);
         b2.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
         b2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                f1.dispose();
+                new InventoryUI();
+                
+            }
+        });
         
         b3 = new JButton("View Reports");
         b3.setBounds(275, 400, 250, 90);
         b3.setForeground(Color.BLACK);
         b3.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
         b3.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                f1.dispose();
+                new ReportUI();
+                
+            }
+        });
         
         b4 = new JButton("Others");
         b4.setBounds(625, 400, 250, 90);
         b4.setForeground(Color.BLACK);
         b4.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
         b4.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                f1.dispose();
+                new OthersUI();
+                
+            }
+        });
         
         //code for load image
         ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\fin.jpg");
@@ -77,7 +106,7 @@ public class MainUi{
         // Add objects to the frame
         f1.add(l1);
         f1.add(l4);
-        f1.add(l5);
+        f1.add(l5); 
         f1.add(b1);
         f1.add(b2);
         f1.add(b3);

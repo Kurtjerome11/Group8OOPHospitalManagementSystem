@@ -71,6 +71,7 @@ public class LoginUI{
                 String password = tPass.getText();
                 if (name.equals("admin")||name.equals("doctor")||name.equals("nurse") 
                     && password.equals("admin")||password.equals("doctor")||password.equals("nurse")) {
+                    f1.dispose();
                     new MainUi();
                 } else {
                     JOptionPane.showMessageDialog(f1, "Invalid Name or Password", "Error", JOptionPane.ERROR_MESSAGE);

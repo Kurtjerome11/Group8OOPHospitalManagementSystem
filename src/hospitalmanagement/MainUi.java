@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class MainUi{
     private JFrame f1 = new JFrame("Group8 OOP");
     private JLabel l1, l2, l4, l5, limg;
-    private JButton b1, b2, b3, b4; 
+    private JButton b1, b2, b3, b4, b5, b6; 
     private JPanel p1;
     
 
@@ -37,10 +37,10 @@ public class MainUi{
         
         //buttons and its settings
         b1 = new JButton("Manage Patients Information");
-        b1.setBounds(275, 175, 250, 100);
+        b1.setBounds(100, 175, 250, 100);
         b1.setForeground(Color.BLACK);
         b1.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
-        b1.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b1.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         b1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                  f1.dispose();
@@ -48,11 +48,11 @@ public class MainUi{
                 } 
         });
         
-        b2 = new JButton("View Hospital's Inventory");
-        b2.setBounds(625, 175, 250, 100);
+        b2 = new JButton("Hospital's Inventory");
+        b2.setBounds(830, 175, 250, 100);
         b2.setForeground(Color.BLACK);
         b2.setFont(new Font("Bookman Old Style", Font.PLAIN, 16));
-        b2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b2.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         b2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 f1.dispose();
@@ -61,11 +61,11 @@ public class MainUi{
             }
         });
         
-        b3 = new JButton("View Reports");
-        b3.setBounds(275, 400, 250, 90);
+        b3 = new JButton("Reports");
+        b3.setBounds(100, 400, 250, 90);
         b3.setForeground(Color.BLACK);
         b3.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
-        b3.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         b3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 f1.dispose();
@@ -75,10 +75,10 @@ public class MainUi{
         });
         
         b4 = new JButton("Others");
-        b4.setBounds(625, 400, 250, 90);
+        b4.setBounds(830, 400, 250, 90);
         b4.setForeground(Color.BLACK);
         b4.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
-        b4.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+        b4.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         b4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 f1.dispose();
@@ -87,8 +87,35 @@ public class MainUi{
             }
         });
         
+        
+        b5 = new JButton("Expenses");
+        b5.setBounds(460, 400, 250, 90);
+        b5.setForeground(Color.BLACK);
+        b5.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
+        b5.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        b5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                f1.dispose();
+                new ExpensesUI();
+                
+            }
+        });
+        
+        b6 = new JButton("Appointments");
+        b6.setBounds(460, 175, 250, 100);
+        b6.setForeground(Color.BLACK);
+        b6.setFont(new Font("Bookman Old Style", Font.PLAIN, 18));
+        b6.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        b6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                f1.dispose();
+                new AppointmentUI();
+                
+            }
+        });
+        
         //code for load image
-        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\fin.jpg");
+        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\FIRST-SEM\\hi.jpeg");
         Image i2 = i1.getImage().getScaledInstance(1200, 480, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         
@@ -111,6 +138,8 @@ public class MainUi{
         f1.add(b2);
         f1.add(b3);
         f1.add(b4);
+        f1.add(b5);
+        f1.add(b6);
         f1.add(p1);
         f1.add(l2);
         

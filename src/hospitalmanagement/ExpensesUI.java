@@ -30,7 +30,12 @@ public class ExpensesUI{
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
         
-       
+        
+        
+        
+        
+        
+        
         //code for load image
         ImageIcon i1 = new ImageIcon("Images\\expenses.jpg");
         Image i2 = i1.getImage().getScaledInstance(1200, 590, Image.SCALE_SMOOTH);

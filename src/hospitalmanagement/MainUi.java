@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class MainUi{
     private JFrame f1 = new JFrame("Group8 OOP");
     private JLabel l1, l2, l4, l5, limg;
-    private JButton b1, b2, b3, b4, b5, b6; 
+    private JButton b1, b2, b3, b4, b5, b6, b7; 
     private JPanel p1;
     
 
@@ -20,17 +20,17 @@ public class MainUi{
         l1 = new JLabel("What do you want to do?");
         l1.setBounds(40, 0, 1000, 100);
         l1.setFont(new Font("Cambria",Font.PLAIN,35));
-        l1.setForeground(Color.WHITE);
+        l1.setForeground(Color.BLACK);
         
         l4 = new JLabel("______________________________________________________________________________");
         l4.setBounds(0, 30, 2000, 100);
         l4.setFont(new Font("Arial",Font.PLAIN,30));
-        l4.setForeground(Color.WHITE);
+        l4.setForeground(Color.BLACK);
         
         l5 = new JLabel("______________________________________________________________________________");
         l5.setBounds(0, 510, 2000, 100);
         l5.setFont(new Font("Arial",Font.PLAIN,30));
-        l5.setForeground(Color.WHITE);
+        l5.setForeground(Color.BLACK);
         
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
@@ -114,9 +114,21 @@ public class MainUi{
             }
         });
         
+        b7 = new JButton("Logout");
+        b7.setBounds(1060, 600, 80, 30);
+        b7.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int response = JOptionPane.showConfirmDialog(f1, "Are you sure you want to logout?", "Logout", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                
+                if (response == JOptionPane.YES_OPTION) {
+                    f1.dispose();
+                    }
+                }
+            });
+        
         //code for load image
         ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\FIRST-SEM\\hi.jpeg");
-        Image i2 = i1.getImage().getScaledInstance(1200, 480, Image.SCALE_SMOOTH);
+        Image i2 = i1.getImage().getScaledInstance(1300, 670, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         
         //label for the pic
@@ -124,7 +136,7 @@ public class MainUi{
         
         //panel for image on the ui and it setttings
         p1 = new JPanel();
-        p1.setBounds(-150, 90, 1500, 700);
+        p1.setBounds(-150, -10, 1500, 700);
         p1.setBackground(Color.BLACK);
         
         //will add the label to the panel
@@ -140,6 +152,7 @@ public class MainUi{
         f1.add(b4);
         f1.add(b5);
         f1.add(b6);
+        f1.add(b7);
         f1.add(p1);
         f1.add(l2);
         

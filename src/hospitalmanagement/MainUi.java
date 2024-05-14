@@ -127,7 +127,7 @@ public class MainUi{
             });
         
         //code for load image
-        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\FIRST-SEM\\hi.jpeg");
+        ImageIcon i1 = new ImageIcon("Images/hi.jpeg");
         Image i2 = i1.getImage().getScaledInstance(1300, 670, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         

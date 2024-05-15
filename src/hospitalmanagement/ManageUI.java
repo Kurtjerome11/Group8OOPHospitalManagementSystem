@@ -17,17 +17,17 @@ public class ManageUI{
     ManageUI() {
         // Frame settings
         f1.setSize(1200, 700);
-        f1.getContentPane().setBackground(Color.BLACK);
+        f1.getContentPane().setBackground(Color.decode("#1f67ba"));
         
         // Label settings
         l1 = new JLabel("Manage Patient's Information");
-        l1.setBounds(380, 0, 1000, 100);
-        l1.setFont(new Font("Cambria",Font.PLAIN,35));
+        l1.setBounds(360, 0, 1000, 100);
+        l1.setFont(new Font("Cambria",Font.BOLD,35));
         l1.setForeground(Color.WHITE);
         
         l4 = new JLabel("______________________________________________________________________________");
-        l4.setBounds(0, 30, 2000, 100);
-        l4.setFont(new Font("Arial",Font.PLAIN,30));
+        l4.setBounds(0, 28, 2000, 100);
+        l4.setFont(new Font("Arial",Font.BOLD,30));
         l4.setForeground(Color.WHITE);
         
         l3 = new JLabel("Please fill up the Patient's Information:");

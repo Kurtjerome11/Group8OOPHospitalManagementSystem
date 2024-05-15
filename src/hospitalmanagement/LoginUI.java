@@ -108,7 +108,7 @@ public class LoginUI{
         p1.add(r3);
         
         //code for load image
-        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\pital.jpg");
+        ImageIcon i1 = new ImageIcon("Images/pital.jpg");
         Image i2 = i1.getImage().getScaledInstance(600, 400, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         

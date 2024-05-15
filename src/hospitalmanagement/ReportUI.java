@@ -37,7 +37,7 @@ public class ReportUI{
         
        
         //code for load image
-        ImageIcon i1 = new ImageIcon("Images/report image.jpg");
+        ImageIcon i1 = new ImageIcon("Images/rprt.jpg");
         Image i2 = i1.getImage().getScaledInstance(1196, 570, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         

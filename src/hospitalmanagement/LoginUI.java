@@ -112,6 +112,7 @@ public class LoginUI{
         Image i2 = i1.getImage().getScaledInstance(600, 400, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         
+        
         //label for the pic
         limg = new JLabel(i3);
         

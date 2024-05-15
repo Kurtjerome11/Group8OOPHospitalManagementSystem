@@ -11,6 +11,9 @@ public class AppointmentUI{
     private JButton b1;
     
 
+    
+    
+    
     AppointmentUI() {
         // Frame settings
         f1.setSize(1200, 700);

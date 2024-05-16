@@ -37,7 +37,7 @@ public class ExpensesUI{
         
        
         //code for load image
-        ImageIcon i1 = new ImageIcon("C:\\Users\\Mhacee Caryl\\Desktop\\bubuy\\.jpg");
+        ImageIcon i1 = new ImageIcon("Images\\expenses.jpg");
         Image i2 = i1.getImage().getScaledInstance(1200, 480, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         

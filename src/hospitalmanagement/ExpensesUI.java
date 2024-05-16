@@ -33,7 +33,7 @@ public class ExpensesUI{
        
         //code for load image
         ImageIcon i1 = new ImageIcon("Images\\expenses.jpg");
-        Image i2 = i1.getImage().getScaledInstance(1200, 480, Image.SCALE_SMOOTH);
+        Image i2 = i1.getImage().getScaledInstance(1200, 590, Image.SCALE_SMOOTH);
         ImageIcon i3 = new ImageIcon(i2);
         
         //label for the pic

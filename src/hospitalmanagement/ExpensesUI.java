@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class ExpensesUI{
     private JFrame f1 = new JFrame("Group8 OOP");
-    private JLabel l1, l2, l4, l5, limg;
+    private JLabel l1, l2, l4, limg;
     private JPanel p1;
     private JButton b1;
     
@@ -14,23 +14,18 @@ public class ExpensesUI{
     ExpensesUI() {
         // Frame settings
         f1.setSize(1200, 700);
-        f1.getContentPane().setBackground(Color.BLACK);
+        f1.getContentPane().setBackground(Color.WHITE);
         
         // Label settings
         l1 = new JLabel("Expenses");
         l1.setBounds(40, 0, 1000, 100);
         l1.setFont(new Font("Cambria",Font.PLAIN,35));
-        l1.setForeground(Color.WHITE);
+        l1.setForeground(Color.ORANGE);
         
         l4 = new JLabel("______________________________________________________________________________");
         l4.setBounds(0, 30, 2000, 100);
         l4.setFont(new Font("Arial",Font.PLAIN,30));
         l4.setForeground(Color.WHITE);
-        
-        l5 = new JLabel("______________________________________________________________________________");
-        l5.setBounds(0, 510, 2000, 100);
-        l5.setFont(new Font("Arial",Font.PLAIN,30));
-        l5.setForeground(Color.WHITE);
         
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
@@ -47,7 +42,7 @@ public class ExpensesUI{
         //panel for image on the ui and it setttings
         p1 = new JPanel();
         p1.setBounds(-150, 90, 1500, 700);
-        p1.setBackground(Color.BLACK);
+        p1.setBackground(Color.WHITE);
         
         //will add the label to the panel
         p1.add(limg);
@@ -65,7 +60,6 @@ public class ExpensesUI{
         // Add objects to the frame
         f1.add(l1);
         f1.add(l4);
-        f1.add(l5);
         f1.add(p1);
         f1.add(b1);
         f1.add(l2);

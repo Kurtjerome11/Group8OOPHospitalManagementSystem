@@ -3,6 +3,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+
 
 public class ManageUI{
     private JFrame f1 = new JFrame("Group8 OOP");
@@ -11,7 +14,10 @@ public class ManageUI{
     private JButton b1,b2,b3;
     private JTextField tID, tName, tAge, tGender, tDate;
     private JTextArea tMed, tPres;
-    private JList lpatient;
+    private JTable lpatient;
+    private DefaultTableModel ltpatient;
+    private JScrollPane sp1;
+
     
 
     ManageUI() {
@@ -77,11 +83,26 @@ public class ManageUI{
         
         l2 = new JLabel();
         l2.setBounds(110, 20, 1000, 100);
-        
-        //List and its settings
-        lpatient = new JList();
+                
+        // Table and its settings
+        String[] columnNames = {"Patient ID", "Name", "Age", "Gender", "Date of Admit", "Medical H.", "Prescriptions"};
+        ltpatient = new DefaultTableModel(columnNames, 0);
+        lpatient = new JTable(ltpatient);
         lpatient.setBounds(585, 170, 550, 390);
         
+        // This to costumize the column size
+        TableColumn id = lpatient.getColumnModel().getColumn(0);
+        id.setPreferredWidth(50);
+        
+        TableColumn age = lpatient.getColumnModel().getColumn(2);
+        age.setPreferredWidth(40); 
+
+        TableColumn gender = lpatient.getColumnModel().getColumn(3);
+        gender.setPreferredWidth(50);
+        
+        sp1 = new JScrollPane(lpatient);
+        sp1.setBounds(585, 170, 550, 390);
+
         //textfields and its settings
         tID = new JTextField();
         tID.setBounds(40, 210, 200, 25);
@@ -157,18 +178,18 @@ public class ManageUI{
         f1.add(l10);
         f1.add(l11);
         f1.add(l12);
-        f1.add(p1);
         f1.add(b1);
         f1.add(b2);
         f1.add(b3);
+        f1.add(sp1);
+        f1.add(tMed);
+        f1.add(tPres);
+        f1.add(p1);
         f1.add(tID);
         f1.add(tName);
         f1.add(tAge);
         f1.add(tGender);
         f1.add(tDate);
-        f1.add(tMed);
-        f1.add(tPres);
-        f1.add(lpatient);
         f1.add(l2);
         
         // Frame settings 2.0

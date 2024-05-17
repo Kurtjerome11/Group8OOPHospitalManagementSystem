@@ -26,7 +26,7 @@ public class ExpensesUI{
         
         // Label settings
         l1 = new JLabel("HOSPITAL EXPENSES");
-        l1.setBounds(455, 0, 1000, 100);
+        l1.setBounds(410, 0, 1000, 100);
         l1.setFont(new Font("Arial",Font.BOLD,35));
         l1.setForeground(Color.RED);
         

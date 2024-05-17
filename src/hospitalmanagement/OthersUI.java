@@ -18,7 +18,7 @@ public class OthersUI{
         
         // Label settings
         l1 = new JLabel("Hospital Hierarchy");
-        l1.setBounds(380, 0, 1000, 100);
+        l1.setBounds(450, 0, 1000, 100);
         l1.setFont(new Font("Cambria",Font.PLAIN,35));
         l1.setForeground(Color.WHITE);
         

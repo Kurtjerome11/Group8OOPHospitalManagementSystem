@@ -9,7 +9,7 @@ public class AppointmentUI {
     private JFrame f1 = new JFrame("Group8 OOP");
     private JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, limg;
     private JPanel p1;
-    private JButton b1, b2;
+    private JButton b1, b2, b3;
     private JTextField tName, tAge, tGender, tDate, tTime, tContact, tEmail, tAddress, tPreferredPhysician, tReason;
 
     AppointmentUI() {
@@ -117,10 +117,10 @@ public class AppointmentUI {
         tDate.setBounds(140, 300, 150, 25);
 
         tTime = new JTextField();
-        tTime.setBounds(550, 180, 150, 25);
+        tTime.setBounds(550, 180, 400, 25);
 
         tContact = new JTextField();
-        tContact.setBounds(550, 220, 150, 25);
+        tContact.setBounds(550, 220, 400, 25);
 
         tAddress = new JTextField();
         tAddress.setBounds(140, 340, 150, 25);
@@ -129,14 +129,14 @@ public class AppointmentUI {
         tEmail.setBounds(140, 380, 150, 25);
 
         tPreferredPhysician = new JTextField();
-        tPreferredPhysician.setBounds(550, 260, 150, 25);
+        tPreferredPhysician.setBounds(550, 260, 400, 25);
 
         tReason = new JTextField();
-        tReason.setBounds(550, 300, 400, 100);
+        tReason.setBounds(550, 300, 400, 200);
 
         // Buttons and their settings
         b1 = new JButton("Save Appointment");
-        b1.setBounds(675, 420, 150, 40);
+        b1.setBounds(70, 500, 150, 40);
         
         b2 = new JButton("Back");
         b2.setBounds(1060, 600, 80, 30);
@@ -146,6 +146,9 @@ public class AppointmentUI {
                 new MainUi();
             }
         });
+        
+        b3 = new JButton("Pending Appointments");
+        b3.setBounds(270, 500, 180, 40);
 
 
         f1.add(l1);
@@ -163,6 +166,7 @@ public class AppointmentUI {
         f1.add(l14);
         f1.add(b1);
         f1.add(b2);
+        f1.add(b3);
         f1.add(p1);
         f1.add(tName);
         f1.add(tAge);

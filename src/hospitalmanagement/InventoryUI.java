@@ -11,7 +11,7 @@ public class InventoryUI {
 
     private JFrame  f1,                                                         //Main Frame
                     fadd, fupd;                                                 //Frame for Button Actions
-    private JLabel  l1, l4, l5, l6, limg,                                       // Main Label
+    private JLabel  l1, l4, l5, l6, l7, limg,                                   // Main Label
                     lfadd, lcate, lprodname, lstock, lloc, llotn, lexd, limg1,  //Labels for the Add Action 
                     lupdt, lupc, luppn, lupst, luploc, luplotn, lupexd, limg2;  //Labels for the Update Action
     private JPanel  p1,                                                         //Main Panel
@@ -37,13 +37,19 @@ public class InventoryUI {
         // Label settings
         l1 = new JLabel("Inventory");
         l1.setBounds(40, 0, 600, 100);
-        l1.setFont(new Font("arial black",Font.PLAIN,60));
+        l1.setFont(new Font("cooper black",Font.PLAIN,50));
         l1.setForeground(Color.black);
+        
+        l7 = new JLabel("______________________________________________________________________________");
+        l7.setBounds(0, 30, 2000, 100);
+        l7.setFont(new Font("Arial",Font.PLAIN,30));
+        l7.setForeground(Color.BLACK);
         
         l4 = new JLabel("Product Name:");
         l4.setBounds(20, 80, 300, 100);
         l4.setFont(new Font("Arial",Font.PLAIN,20));
         l4.setForeground(Color.black);
+        
         
         l5 = new JLabel("Expiration Date:");
         l5.setBounds(330, 80, 300, 100);
@@ -311,6 +317,7 @@ public class InventoryUI {
         f1.add(l1);
         f1.add(l4);
         f1.add(l6);
+        f1.add(l7);
         f1.add(t1);
         f1.add(tprodname);
         f1.add(cbtype);

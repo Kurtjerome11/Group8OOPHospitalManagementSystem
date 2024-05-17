@@ -16,43 +16,50 @@ public class ExpensesUI{
     private DefaultTableModel tblm;
     private JScrollPane sp1;
     
-    //contructor
     public ExpensesUI() {
+        //Frame Settings
         f1 = new JFrame("Group8 OOP");
-        f1.getContentPane().setBackground(Color.decode("#1f67ba"));
+        f1.setSize(1200, 700);
+        f1.getContentPane().setBackground(Color.WHITE);
         
         // Label settings
-        l1 = new JLabel("Manage Patient's Information");
-        l1.setBounds(360, 0, 1000, 100);
-        l1.setFont(new Font("Cambria",Font.BOLD,35));
-        l1.setForeground(Color.WHITE);
+        l1 = new JLabel("Expenses");
+        l1.setBounds(545, 0, 1000, 100);
+        l1.setFont(new Font("Arial",Font.BOLD,35));
+        l1.setForeground(Color.RED);
         
-        l2 = new JLabel("______________________________________________________________________________");
-        l2.setBounds(0, 28, 2000, 100);
-        l2.setFont(new Font("Arial",Font.BOLD,30));
-        l2.setForeground(Color.WHITE);
+        l2 = new JLabel("List of Hospital Expenses:");
+        l2.setBounds(100, 60, 1000, 100);
+        l2.setFont(new Font("Arial",Font.BOLD,20));
+        l2.setForeground(Color.BLACK);
         
-        l2 = new JLabel();
-        l2.setBounds(110, 20, 1000, 100);
+        l3 = new JLabel();
+        l3.setBounds(110, 20, 1000, 100);
                 
         // Table and its settings
         String[] columnNames = {"Date","Description","Amount","Encoder"};
         tblm = new DefaultTableModel(columnNames, 0);
         tbl = new JTable(tblm);
         tbl.setBounds(585, 170, 550, 390);
+       
+        JScrollPane scrollPane = new JScrollPane(tbl);
+        f1.add(scrollPane); 
         
         // This to costumize the column size
-        TableColumn id = tbl.getColumnModel().getColumn(0);
-        id.setPreferredWidth(50);
+        TableColumn date = tbl.getColumnModel().getColumn(0);
+        date.setPreferredWidth(50);
         
-        TableColumn age = tbl.getColumnModel().getColumn(2);
-        age.setPreferredWidth(40); 
+        TableColumn description = tbl.getColumnModel().getColumn(2);
+        description.setPreferredWidth(50); 
 
-        TableColumn gender = tbl.getColumnModel().getColumn(3);
-        gender.setPreferredWidth(50);
+        TableColumn amount = tbl.getColumnModel().getColumn(3);
+        amount.setPreferredWidth(50);
+        
+        TableColumn encoder = tbl.getColumnModel().getColumn(3);
+        encoder.setPreferredWidth(50);
         
         sp1 = new JScrollPane(tbl);
-        sp1.setBounds(585, 170, 550, 390);
+        sp1.setBounds(100, 130, 600, 420);
         
        
         //code for load image
@@ -71,7 +78,7 @@ public class ExpensesUI{
         //will add the label to the panel
         p1.add(limg);
         
-        //buttons and its settings
+        //Buttons settings
         b1 = new JButton("Back");
         b1.setBounds(1060, 600, 80, 30);
         b1.addActionListener(new ActionListener() {
@@ -82,27 +89,35 @@ public class ExpensesUI{
         });
         
         b2 = new JButton("Add Expense Record");
-        b2.setBounds(300, 550, 115, 35);
+        b2.setBounds(100, 560, 200, 35);
+        b2.setBackground(Color.ORANGE);
         b2.setForeground(Color.BLACK);
-        b2.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
+        b2.setFont(new Font("Bookman Old Style", Font.BOLD, 14));
         b2.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        b2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        b2.setFocusPainted(false);
+        b2.setBorderPainted(false);
         
         b3 = new JButton("Delete Expense Record");
-        b3.setBounds(425, 550, 115, 35);
+        b3.setBounds(350, 560, 200, 35);
+        b3.setBackground(Color.PINK);
         b3.setForeground(Color.BLACK);
-        b3.setFont(new Font("Bookman Old Style", Font.PLAIN, 15));
+        b3.setFont(new Font("Bookman Old Style", Font.BOLD, 14));
         b3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        b3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        b3.setFocusPainted(false);
+        b3.setBorderPainted(false);
 
         
         // Add objects to the frame
         f1.add(l1);
+        f1.add(l2);
         f1.add(l3);
         f1.add(b1);
         f1.add(b2);
         f1.add(b3);
         f1.add(sp1);
         f1.add(p1);
-        f1.add(l2);
         
         // Frame settings 2.0
         f1.setVisible(true);

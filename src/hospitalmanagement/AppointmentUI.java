@@ -9,7 +9,7 @@ public class AppointmentUI {
     private JFrame f1 = new JFrame("Group8 OOP");
     private JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, limg;
     private JPanel p1;
-    private JButton b1;
+    private JButton b1, b2;
     private JTextField tName, tAge, tGender, tDate, tTime, tContact, tEmail, tAddress, tPreferredPhysician, tReason;
 
     AppointmentUI() {
@@ -18,8 +18,8 @@ public class AppointmentUI {
         f1.getContentPane().setBackground(Color.decode("#1f67ba"));
 
         // Label settings
-        l1 = new JLabel("Manage Patient's Information");
-        l1.setBounds(360, 0, 1000, 100);
+        l1 = new JLabel("BOOK AN APPOINTMENT");
+        l1.setBounds(380, 0, 1000, 100);
         l1.setFont(new Font("Cambria", Font.BOLD, 35));
         l1.setForeground(Color.WHITE);
 
@@ -28,7 +28,7 @@ public class AppointmentUI {
         l4.setFont(new Font("Arial", Font.BOLD, 30));
         l4.setForeground(Color.WHITE);
 
-        l3 = new JLabel("BOOK AN APPOINTMENT");
+        l3 = new JLabel("");
         l3.setBounds(40, 80, 1000, 100);
         l3.setFont(new Font("DM Serif Display", Font.BOLD, 30));
         l3.setForeground(Color.WHITE);
@@ -136,13 +136,17 @@ public class AppointmentUI {
 
         // Buttons and their settings
         b1 = new JButton("Save Appointment");
-        b1.setBounds(900, 550, 150, 40);
-        b1.addActionListener(new ActionListener() {
+        b1.setBounds(675, 420, 150, 40);
+        
+        b2 = new JButton("Back");
+        b2.setBounds(1060, 600, 80, 30);
+        b2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 f1.dispose();
                 new MainUi();
             }
         });
+
 
         f1.add(l1);
         f1.add(l4);
@@ -157,8 +161,9 @@ public class AppointmentUI {
         f1.add(l12);
         f1.add(l13);
         f1.add(l14);
-        f1.add(p1);
         f1.add(b1);
+        f1.add(b2);
+        f1.add(p1);
         f1.add(tName);
         f1.add(tAge);
         f1.add(tGender);
@@ -178,7 +183,4 @@ public class AppointmentUI {
         f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static void main(String[] args) {
-        new AppointmentUI();
-    }
 }
